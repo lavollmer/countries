@@ -32,17 +32,25 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 2%;
+  outline: none;
 }
 
 .search-button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 4px;
+  justify-content: space-evenly;
+  font-family: 'Nunito sans', sans-serif;
+  outline: none;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 10%;
 }
 
 .input {
   display: flex;
   flex-direction: row;
-  padding: 4px;
+  align-items: center;
+  font-family: 'Nunito sans', sans-serif;
+  outline: none;
+  background-color: hsl(0, 100%, 100%);
 }

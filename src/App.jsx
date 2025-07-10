@@ -16,7 +16,7 @@ function App() {
             <div>
               <button className='search-button'>
                 <CiSearch />
-                <input placeholder='Search for a country...' type='text' value={country}/>
+                <input placeholder='Search for a country...' type='text' value={country} />
               </button>
             </div>
             <div>
