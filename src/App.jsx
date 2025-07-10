@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './App.css'
+import { CiSearch } from "react-icons/ci";
 
 function App() {
+  const [country, setCountry] = useState('')
 
   return (
     <>
@@ -10,11 +12,16 @@ function App() {
           <h1 className='title'>Where in the world?</h1>
         </div>
         <div className='background-body'>
-          <div>
-            <h1>Search Bar </h1>
-          </div>
-          <div>
-            <h1>Filter</h1>
+          <div className='search'>
+            <div>
+              <button className='search-button'>
+                <CiSearch />
+                <input placeholder='Search for a country...' type='text' value={country}/>
+              </button>
+            </div>
+            <div>
+              <h1>Filter</h1>
+            </div>
           </div>
         </div>
       </div>
