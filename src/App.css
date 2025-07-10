@@ -3,15 +3,18 @@
   flex-direction: column;
   margin: 0px;
   padding: 0px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .header {
   background-color: hsl(0, 100%, 100%);
-  padding: 2px;
 }
 
 .title {
-  font-family: 'nunito-sans', 'sans-serif';
+  font-family: 'Nunito sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
 }
 
 .background-page {
@@ -19,5 +22,7 @@
   flex-direction: column;
   margin: 0px;
   padding: 0px;
-  background-color: hsl(0, 0%, 50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: #FAFAFA
 }

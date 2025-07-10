@@ -11,10 +11,10 @@ function App() {
         </div>
         <div className='background-body'>
           <div>
-
+            <h1>Search Bar </h1>
           </div>
           <div>
-
+            <h1>Filter</h1>
           </div>
         </div>
       </div>
