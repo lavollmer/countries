@@ -54,3 +54,14 @@
   outline: none;
   background-color: hsl(0, 100%, 100%);
 }
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 2px;
+  background-color: #FAFAFA;
+  font-family: 'Nunito sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}

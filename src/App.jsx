@@ -8,17 +8,17 @@ function App() {
   const [originalData, setOriginalData] = useState([])
   const [filteredData, setFilteredData] = useState(originalData)
 
-const handleFilterChange = (e) => {
-  const filteredData = e.target.value;
-  setSelectedFilter(newFilter);
+  const handleFilterChange = (e) => {
+    const filteredData = e.target.value;
+    setSelectedFilter(newFilter);
 
-  if (newFilter === ''){
-    setFilteredData(originalData)
-  } else {
-    const newFilteredData = originalData.filter(item => item.category === newFilter);
-    setFilteredData(newFilteredData);
+    if (newFilter === '') {
+      setFilteredData(originalData)
+    } else {
+      const newFilteredData = originalData.filter(item => item.category === newFilter);
+      setFilteredData(newFilteredData);
+    }
   }
-}
 
   return (
     <>
@@ -36,11 +36,14 @@ const handleFilterChange = (e) => {
             </div>
             {/* Filter Dropdown Menu */}
             <div>
-              <div>
+              <div className='dropdown'>
                 <select value={selectedFilter} onChange={handleFilterChange}>
-                  <option value="">France</option>
-                  <option value="">France</option>
-                  <option value="">France</option>
+                  <option value="">Filter by Region</option>
+                  <option value="">Africa</option>
+                  <option value="">America</option>
+                  <option value="">Asia</option>
+                  <option value="">Europe</option>
+                  <option value="">Oceania</option>
                 </select>
               </div>
             </div>
