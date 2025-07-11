@@ -4,9 +4,21 @@ import { CiSearch } from "react-icons/ci";
 
 function App() {
   const [country, setCountry] = useState('')
-  const [seletectedFilter, setSelectedFilter] = useState('')
+  const [selectedFilter, setSelectedFilter] = useState('')
   const [originalData, setOriginalData] = useState([])
   const [filteredData, setFilteredData] = useState(originalData)
+
+const handleFilterChange = (e) => {
+  const filteredData = e.target.value;
+  setSelectedFilter(newFilter);
+
+  if (newFilter === ''){
+    setFilteredData(originalData)
+  } else {
+    const newFilteredData = originalData.filter(item => item.category === newFilter);
+    setFilteredData(newFilteredData);
+  }
+}
 
   return (
     <>
