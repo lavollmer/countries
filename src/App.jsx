@@ -36,7 +36,7 @@ function App() {
             </div>
             {/* Filter Dropdown Menu */}
             <div>
-              <div className='dropdown'>
+              <nav className='dropdown'>
                 <select value={selectedFilter} onChange={handleFilterChange}>
                   <option value="">Filter by Region</option>
                   <option value="">Africa</option>
@@ -45,7 +45,7 @@ function App() {
                   <option value="">Europe</option>
                   <option value="">Oceania</option>
                 </select>
-              </div>
+              </nav>
             </div>
           </div>
         </div>
