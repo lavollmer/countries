@@ -52,10 +52,21 @@ function App() {
             </div>
           </div>
         </div>
+        {/* Country Card component */}
         <div>
-          <CountryCard key={item.id} title={item.title} imageUrl={item.imageUrl} population={item.population} region={item.region} capital={item.capital}/>
+          {loading ? (
+            <p>Loading...</p>
+          ) : error ? (
+            <p>Error: {error}</p>
+          ) : (
+            <div className='card-list'>
+              {data.map((item) => (
+                <CountryCard key={item.id} title={item.title} imageUrl={item.imageUrl} population={item.population} region={item.region} capital={item.capital} />
+              ))}
+            </div>
+          )}
         </div>
-      </div >
+      </div>
     </>
   )
 }
