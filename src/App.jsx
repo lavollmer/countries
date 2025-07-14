@@ -13,7 +13,8 @@ function App() {
   const [newFilter, setNewFilter] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
-  const [data, setData] = useState('')
+  const [data, setData] = useState([])
+  const [inputValue,setInputValue] = useState('')
 
   const handleFilterChange = (e) => {
     const filteredData = e.target.value;
@@ -29,7 +30,7 @@ function App() {
 
   async function fetchData() {
     try {
-      const response = await axios.get('https://api/country')
+      const response = await axios.get('http://localhost:5173/api/country')
       console.log(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -50,7 +51,7 @@ function App() {
             <div>
               <button className='search-button'>
                 <CiSearch />
-                <input placeholder='Search for a country...' type='text' value={country} />
+                <input placeholder='Search for a country...' type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
               </button>
             </div>
             {/* Filter Dropdown Menu */}
