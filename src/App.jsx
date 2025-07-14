@@ -61,7 +61,13 @@ function App() {
           ) : (
             <div className='card-list'>
               {data.map((item) => (
-                <CountryCard key={item.id} title={item.title} imageUrl={item.imageUrl} population={item.population} region={item.region} capital={item.capital} />
+                <CountryCard 
+                key={item.id} 
+                country={item.country} 
+                imageUrl={item.imageUrl} 
+                population={item.population} 
+                region={item.region} 
+                capital={item.capital} />
               ))}
             </div>
           )}

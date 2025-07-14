@@ -1,26 +1,25 @@
-import React from 'react';
 import '../App.css';
 
-const CountryCard ({title, imageUrl, population, region, capital}) => {
+function CountryCard ({country, imageUrl, population, region, capital}) {
     return (
         <div className='countries-card'>
           <div className='country-image'>
             <image src={imageUrl}></image>
           </div>
           <div className='country-name'>
-            <h1>{title}</h1>
+            <h1>{country}</h1>
           </div>
           <div className='country-detail-row'>
             <p className='country-detail'>Population: </p>
-            <p>POP DEETS</p>
+            <p>{population}</p>
           </div>
           <div className='country-detail-row'>
             <p className='country-detail'>Region: </p>
-            <p>REGION</p>
+            <p>{region}</p>
           </div>
           <div className='country-detail-row'>
             <p className='country-detail'>Capital: </p>
-            <p>CAPITAL</p>
+            <p>{capital}</p>
           </div>
 
         </div>
