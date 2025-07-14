@@ -51,7 +51,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='countries-list'>
+        <div className='countries-card'>
           <div className='country-image'>
             <p>IMAGE</p>
           </div>
@@ -60,15 +60,15 @@ function App() {
           </div>
           <div>
             <div className='country-detail-row'>
-              <p className='country-details'>Population: </p>
+              <p className='country-detail'>Population: </p>
               <p>POP DEETS</p>
             </div>
             <div className='country-detail-row'>
-              <p className='country-details'>Region: </p>
+              <p className='country-detail'>Region: </p>
               <p>REGION</p>
             </div>
             <div className='country-detail-row'>
-              <p className='country-details'>Capital: </p>
+              <p className='country-detail'>Capital: </p>
               <p>CAPITAL</p>
             </div>
           </div>

@@ -63,7 +63,7 @@ There are no assets for this challenge, as the country flags will be pulled from
 - [Google Fonts](https://www.w3schools.com/css/css_font_google.asp) - This helped me integrate Google Fonts into CSS language for matching the design portfolio requirements.
 - [REST Countries API](https://restcountries.com/) - This is the API used for the project.
 - [React Icons](https://react-icons.github.io/react-icons/search/#q=) - This provided the icons for the website.
-- [R](h) - This provided the icons for the website.
+- [CSS Box Shadow](https://www.w3schools.com/css/css3_shadows_box.asp) Box shadow property to create paper like cards.
 - [R](h) - This provided the icons for the website.
 - [R](h) - This provided the icons for the website.
 - [R](h) - This provided the icons for the website.
