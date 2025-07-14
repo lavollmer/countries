@@ -56,6 +56,11 @@ There are no assets for this challenge, as the country flags will be pulled from
 
 ### Continued development
 
+1. Displaying API Data in Cards - I learned how to work better with API data and display on the frontend. I used useSTate for data, loading state and error handling and useEffect to fetch the data when the component mounts. I created a card component that is reusable to accept data as props. I mapped over the data and rendered the cards. I integrated the data into my app.
+2. Syntax Erros - Missing intializer in const declaration. I received this error working on my Axios backend to frontend connection. Through this I realized my reusable card component needed to be a function, and not a const. In React, declaring a functional component vs. assigning an arrow function to a const variable revolves around preferences. The biggest difference is hoisting - when using a function component, it hoists it to the top of the file.
+3. TypeError - data.map is not a function of App. This error involved declaring my data variable and useState. I realized that data should be an array and not an empty string when declaring. The map () method i s a standard JS array method use to iterate over array elements.
+4. Fetching Data with Axios - Wrap Axios call within in async function and use await axios.get() to pause execution until the promise returns. Use a try...catch block for robust error handling.
+
 
 ### Useful resources
 
@@ -64,7 +69,7 @@ There are no assets for this challenge, as the country flags will be pulled from
 - [REST Countries API](https://restcountries.com/) - This is the API used for the project.
 - [React Icons](https://react-icons.github.io/react-icons/search/#q=) - This provided the icons for the website.
 - [CSS Box Shadow](https://www.w3schools.com/css/css3_shadows_box.asp) Box shadow property to create paper like cards.
-- [R](h) - This provided the icons for the website.
+- [Const vs Function Component](https://dev.to/ugglr/react-functional-components-const-vs-function-2kj9) - Explanation of const vs function component.
 - [R](h) - This provided the icons for the website.
 - [R](h) - This provided the icons for the website.
 
