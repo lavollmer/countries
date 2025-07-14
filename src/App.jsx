@@ -3,6 +3,7 @@ import './App.css'
 import { CiSearch } from "react-icons/ci";
 
 function App() {
+  // use state of variables
   const [country, setCountry] = useState('')
   const [selectedFilter, setSelectedFilter] = useState('')
   const [originalData, setOriginalData] = useState([])
@@ -47,6 +48,28 @@ function App() {
                   <option value={filteredData}>Oceania</option>
                 </select>
               </nav>
+            </div>
+          </div>
+        </div>
+        <div className='countries-list'>
+          <div className='country-image'>
+            <p>IMAGE</p>
+          </div>
+          <div className='country-name'>
+            <h1>Country Name</h1>
+          </div>
+          <div>
+            <div className='country-detail-row'>
+              <p className='country-details'>Population: </p>
+              <p>POP DEETS</p>
+            </div>
+            <div className='country-detail-row'>
+              <p className='country-details'>Region: </p>
+              <p>REGION</p>
+            </div>
+            <div className='country-detail-row'>
+              <p className='country-details'>Capital: </p>
+              <p>CAPITAL</p>
             </div>
           </div>
         </div>
