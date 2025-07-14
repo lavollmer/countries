@@ -37,13 +37,13 @@ function App() {
             {/* Filter Dropdown Menu */}
             <div>
               <nav className='dropdown'>
-                <select value={selectedFilter} onChange={handleFilterChange}>
-                  <option value="">Filter by Region</option>
-                  <option value="">Africa</option>
-                  <option value="">America</option>
-                  <option value="">Asia</option>
-                  <option value="">Europe</option>
-                  <option value="">Oceania</option>
+                <select value={selectedFilter}>
+                  <option>Filter by Region</option>
+                  <option>Africa</option>
+                  <option>America</option>
+                  <option>Asia</option>
+                  <option>Europe</option>
+                  <option>Oceania</option>
                 </select>
               </nav>
             </div>
