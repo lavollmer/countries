@@ -23,11 +23,6 @@ function App() {
     }
   }
 
-  useEffect(() => {
-
-  }
-), []);
-
   return (
     <>
       <div className='background-page'>
@@ -57,10 +52,10 @@ function App() {
             </div>
           </div>
         </div>
-        <CountryCard />
-
+        <div>
+          <CountryCard key={item.id} title={item.title} imageUrl={item.imageUrl} population={item.population} region={item.region} capital={item.capital}/>
         </div>
-      </div>
+      </div >
     </>
   )
 }

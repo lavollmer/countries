@@ -1,14 +1,14 @@
 import React from 'react';
 import '../App.css';
 
-const CountryCard ({title, imageUrl, description}) => {
+const CountryCard ({title, imageUrl, population, region, capital}) => {
     return (
         <div className='countries-card'>
           <div className='country-image'>
-            <p>IMAGE</p>
+            <image src={imageUrl}></image>
           </div>
           <div className='country-name'>
-            <h1>Country Name</h1>
+            <h1>{title}</h1>
           </div>
           <div className='country-detail-row'>
             <p className='country-detail'>Population: </p>
