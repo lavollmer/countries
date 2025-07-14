@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { CiSearch } from "react-icons/ci";
+import CountryCard from './component/countrycard';
 
 function App() {
   // use state of variables
@@ -21,6 +22,11 @@ function App() {
       setFilteredData(newFilteredData);
     }
   }
+
+  useEffect(() => {
+
+  }
+), []);
 
   return (
     <>
@@ -51,27 +57,8 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='countries-card'>
-          <div className='country-image'>
-            <p>IMAGE</p>
-          </div>
-          <div className='country-name'>
-            <h1>Country Name</h1>
-          </div>
-          <div>
-            <div className='country-detail-row'>
-              <p className='country-detail'>Population: </p>
-              <p>POP DEETS</p>
-            </div>
-            <div className='country-detail-row'>
-              <p className='country-detail'>Region: </p>
-              <p>REGION</p>
-            </div>
-            <div className='country-detail-row'>
-              <p className='country-detail'>Capital: </p>
-              <p>CAPITAL</p>
-            </div>
-          </div>
+        <CountryCard />
+
         </div>
       </div>
     </>
