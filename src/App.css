@@ -73,6 +73,11 @@
   font-weight: 600;
 }
 
+.card-list {
+  display: flex;
+  flex-direction: row;
+}
+
 .countries-card {
   display: flex;
   flex-direction: column;
@@ -121,5 +126,10 @@
     flex-direction: column;
     margin: 0px;
     padding: 0px;
+  }
+
+  .card-list {
+    display: flex;
+    flex-direction: column;
   }
 }

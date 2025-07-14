@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { CiSearch } from "react-icons/ci";
 import CountryCard from './component/countrycard';
+import axios from 'axios';
 
 function App() {
   // use state of variables
@@ -10,6 +11,9 @@ function App() {
   const [originalData, setOriginalData] = useState([])
   const [filteredData, setFilteredData] = useState(originalData)
   const [newFilter, setNewFilter] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
+  const [data, setData] = useState('')
 
   const handleFilterChange = (e) => {
     const filteredData = e.target.value;
@@ -22,6 +26,18 @@ function App() {
       setFilteredData(newFilteredData);
     }
   }
+
+  async function fetchData() {
+    try {
+      const response = await axios.get('https://api/country')
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+  fetchData()
+
 
   return (
     <>
@@ -61,13 +77,13 @@ function App() {
           ) : (
             <div className='card-list'>
               {data.map((item) => (
-                <CountryCard 
-                key={item.id} 
-                country={item.country} 
-                imageUrl={item.imageUrl} 
-                population={item.population} 
-                region={item.region} 
-                capital={item.capital} />
+                <CountryCard
+                  key={item.id}
+                  country={item.country}
+                  imageUrl={item.imageUrl}
+                  population={item.population}
+                  region={item.region}
+                  capital={item.capital} />
               ))}
             </div>
           )}
