@@ -7,6 +7,7 @@ function App() {
   const [selectedFilter, setSelectedFilter] = useState('')
   const [originalData, setOriginalData] = useState([])
   const [filteredData, setFilteredData] = useState(originalData)
+  const [newFilter, setNewFilter] = useState('')
 
   const handleFilterChange = (e) => {
     const filteredData = e.target.value;
@@ -37,13 +38,13 @@ function App() {
             {/* Filter Dropdown Menu */}
             <div>
               <nav className='dropdown'>
-                <select value={selectedFilter}>
-                  <option>Filter by Region</option>
-                  <option>Africa</option>
-                  <option>America</option>
-                  <option>Asia</option>
-                  <option>Europe</option>
-                  <option>Oceania</option>
+                <select value={selectedFilter} onChange={handleFilterChange}>
+                  <option value={filteredData}>Filter by Region</option>
+                  <option value={filteredData}>Africa</option>
+                  <option value={filteredData}>America</option>
+                  <option value={filteredData}>Asia</option>
+                  <option value={filteredData}>Europe</option>
+                  <option value={filteredData}>Oceania</option>
                 </select>
               </nav>
             </div>

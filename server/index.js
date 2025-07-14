@@ -9,12 +9,12 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-app.get('api/country',async(req,res) => {
+app.get('api/country', async(req,res) => {
     const country = req.query.query;
     const apiKey = process.env.VITE_REACT_APP_COUNTRY;
 
     try {
-        const response = await axios.get('')
+        const response = await axios.get('http://localhost/api/country')
         res.json(response.data);
     } catch {
         console.error('Error fetching from API:', error.message)
@@ -23,6 +23,6 @@ app.get('api/country',async(req,res) => {
 })
 
 app.listen(PORT, () => {
-    console.log('Server running on 'http://localhost:${PORT}')
+    console.log(`Server running on 'http://localhost:${PORT}'`)
 })
 
