@@ -30,8 +30,9 @@ function App() {
 
   async function fetchData() {
     try {
-      const response = await axios.get('http://localhost:5173/api/country')
+      const response = await axios.get('https://restcountries.com/v3.1/independent?status=true&fields=languages,capital&fields=languages,country')
       console.log(response.data);
+      setData(response.data)
     } catch (error) {
       console.error('Error fetching data:', error);
     }
