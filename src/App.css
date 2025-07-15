@@ -73,16 +73,18 @@
   font-weight: 600;
 }
 
-.card-list {
-  display: flex;
-  flex-direction: row;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding:10px;
 }
 
 .countries-card {
   display: flex;
   flex-direction: column;
   width: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   padding: 10px;
 }

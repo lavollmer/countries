@@ -14,7 +14,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const [data, setData] = useState([])
-  const [inputValue,setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState('')
 
   const handleFilterChange = (e) => {
     const filteredData = e.target.value;
@@ -30,7 +30,7 @@ function App() {
 
   async function fetchData() {
     try {
-      const response = await axios.get('https://restcountries.com/v3.1/independent?status=true&fields=languages,capital&fields=languages,country')
+      const response = await axios.get('https://restcountries.com/v3.1/independent?status=true&fields=name,capital,languages,region,subregion,population,flag')
       console.log(response.data);
       setData(response.data)
     } catch (error) {
@@ -77,16 +77,18 @@ function App() {
           ) : error ? (
             <p>Error: {error}</p>
           ) : (
-            <div className='card-list'>
-              {data.map((item) => (
-                <CountryCard
-                  key={item.id}
-                  country={item.country}
-                  imageUrl={item.imageUrl}
-                  population={item.population}
-                  region={item.region}
-                  capital={item.capital} />
-              ))}
+            <div className='grid-container'>
+              <div className='grid-item'>
+                {data.map((item) => (
+                  <CountryCard
+                    key={item.id}
+                    country={item.country}
+                    imageUrl={item.flag}
+                    population={item.population}
+                    region={item.region}
+                    capital={item.capital} />
+                ))}
+                </div>
             </div>
           )}
         </div>
