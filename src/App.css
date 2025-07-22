@@ -122,40 +122,47 @@
   display: block;
   text-align: left;
   text-decoration: none;
+  padding-left: 10px;
   font-family: 'Nunito sans', sans-serif;
   font-size: 0.5rem;
   font-weight: 600;
 }
 
 .country-detail-card {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
   align-items: left;
-  width: 100%; 
+  width: 100%;
 }
 
 .country-detail-row {
   display: flex;
   flex-direction: row;
-  align-items: left;
-  padding: 2px;
+  align-items: flex-start;
+  margin: 0px;
+  padding: 0px;
   font-family: 'Nunito sans', sans-serif;
 }
 
 .country-detail {
-  display: block;
+  display: flex;
   text-align: left;
   text-decoration: none;
+  margin: 0px;
+  padding: 0px;
   font-family: 'Nunito sans', sans-serif;
   font-size: 1rem;
   font-weight: 700;
 }
 
 .country-detail-actual {
-  display: block;
+  display: flex;
   text-align: left;
   text-decoration: none;
+  margin: 0px;
+  padding: 0px;
   font-family: 'Nunito sans', sans-serif;
   font-size: 1rem;
   font-weight: 400;
