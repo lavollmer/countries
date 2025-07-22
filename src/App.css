@@ -78,6 +78,7 @@
   max-width: 1200px;
   padding: 1rem;
   margin: auto;
+  background-color: #FAFAFA
 }
 
 .grid-container {
@@ -99,9 +100,11 @@
 .countries-card {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 10px;
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
   padding: 10px;
 }
 
@@ -124,9 +127,20 @@
   font-weight: 600;
 }
 
+.country-detail-card {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 100%; 
+}
+
 .country-detail-row {
   display: flex;
   flex-direction: row;
+  align-items: left;
+  padding: 2px;
+  font-family: 'Nunito sans', sans-serif;
 }
 
 .country-detail {
@@ -134,8 +148,17 @@
   text-align: left;
   text-decoration: none;
   font-family: 'Nunito sans', sans-serif;
-  font-size: 0.5rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.country-detail-actual {
+  display: block;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Nunito sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 600px) {
