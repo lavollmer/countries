@@ -62,7 +62,54 @@ There are no assets for this challenge, as the country flags will be pulled from
 4. Fetching Data with Axios - Wrap Axios call within in async function and use await axios.get() to pause execution until the promise returns. Use a try...catch block for robust error handling.
 5. Add index as a second parameter in .map() - Map method needs two arguments - the current item listed first and the second is the index starting at 0.
 6. Correctly Passing Data to Props - I was intially referencing properties that didn't exist or were structured differently. I was able to change the values based on actual structure and successfully pass the information. I learned to always check my actual data structure.
+7. Mapping CSS with Grid Container - I learned that I was mapping each item in one grid container item instead of each individual item across the row. The below was the incorrect code:
 
+``{/* Country Card component */}
+        <div className='grid-container-wrapper'>
+          {loading ? (
+            <p>Loading...</p>
+          ) : error ? (
+            <p>Error: {error}</p>
+          ) : (
+            <div className='grid-container'>
+              <div className='grid-item'>
+                {data.map((item, index) => (
+                  <CountryCard
+                    key={index}
+                    country={item.name.common}
+                    imageUrl={item.flag}
+                    population={item.population}
+                    region={item.region}
+                    capital={item.capital?.[0] || "N/A"} />
+                ))}
+                </div>
+            </div>
+          )}
+        </div>
+      </div>``
+
+I was able to update the code to have the div tag on the inside of the map method.
+
+``{/* Country Card component */}
+        <div className='grid-container-wrapper'>
+          {loading ? (
+            <p>Loading...</p>
+          ) : error ? (
+            <p>Error: {error}</p>
+          ) : (
+            <div className='grid-container'>
+                {data.map((item, index) => (
+                  <div className='grid-item' key={index}>
+                  <CountryCard
+                    country={item.name.common}
+                    imageUrl={item.flag}
+                    population={item.population}
+                    region={item.region}
+                    capital={item.capital?.[0] || "N/A"} />
+                  </div>
+                ))}
+            </div>
+          )}``
 
 ### Useful resources
 

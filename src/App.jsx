@@ -78,17 +78,16 @@ function App() {
             <p>Error: {error}</p>
           ) : (
             <div className='grid-container'>
-              <div className='grid-item'>
                 {data.map((item, index) => (
+                  <div className='grid-item' key={index}>
                   <CountryCard
-                    key={index}
                     country={item.name.common}
                     imageUrl={item.flag}
                     population={item.population}
                     region={item.region}
                     capital={item.capital?.[0] || "N/A"} />
+                  </div>
                 ))}
-                </div>
             </div>
           )}
         </div>
