@@ -79,14 +79,14 @@ function App() {
           ) : (
             <div className='grid-container'>
               <div className='grid-item'>
-                {data.map((item) => (
+                {data.map((item, index) => (
                   <CountryCard
-                    key={item.id}
+                    key={index}
                     country={item.name.common}
                     imageUrl={item.flag}
                     population={item.population}
                     region={item.region}
-                    capital={item.capital} />
+                    capital={item.capital?.[0] || "N/A"} />
                 ))}
                 </div>
             </div>
