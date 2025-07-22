@@ -59,12 +59,12 @@ function App() {
             <div>
               <nav className='dropdown'>
                 <select value={selectedFilter} onChange={handleFilterChange}>
-                  <option value={filteredData}>Filter by Region</option>
-                  <option value={filteredData}>Africa</option>
-                  <option value={filteredData}>America</option>
-                  <option value={filteredData}>Asia</option>
-                  <option value={filteredData}>Europe</option>
-                  <option value={filteredData}>Oceania</option>
+                  <option className='dropdown-item' value={filteredData}>Filter by Region</option>
+                  <option className='dropdown-item' value={filteredData}>Africa</option>
+                  <option className='dropdown-item' value={filteredData}>America</option>
+                  <option className='dropdown-item' value={filteredData}>Asia</option>
+                  <option className='dropdown-item' value={filteredData}>Europe</option>
+                  <option className='dropdown-item' value={filteredData}>Oceania</option>
                 </select>
               </nav>
             </div>
