@@ -52,13 +52,13 @@ function App() {
             <div>
               <button className='search-button'>
                 <CiSearch />
-                <input placeholder='Search for a country...' type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                <input className='input' placeholder='Search for a country...' type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
               </button>
             </div>
             {/* Filter Dropdown Menu */}
             <div>
-              <nav className='dropdown'>
-                <select value={selectedFilter} onChange={handleFilterChange}>
+              <nav>
+                <select className='dropdown' value={selectedFilter} onChange={handleFilterChange}>
                   <option className='dropdown-item' value={filteredData}>Filter by Region</option>
                   <option className='dropdown-item' value={filteredData}>Africa</option>
                   <option className='dropdown-item' value={filteredData}>America</option>
