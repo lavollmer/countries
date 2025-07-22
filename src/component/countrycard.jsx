@@ -4,10 +4,12 @@ function CountryCard ({country, imageUrl, population, region, capital}) {
     return (
         <div className='countries-card'>
           <div className='country-image'>
-            <image src={imageUrl}></image>
+            <h1>Image Flag</h1>
+            <image src={imageUrl} alt="Country Image"></image>
           </div>
           <div className='country-name'>
-            <h1>{country}</h1>
+            <h1>Country</h1>
+            <h1>{name}</h1>
           </div>
           <div className='country-detail-row'>
             <p className='country-detail'>Population: </p>

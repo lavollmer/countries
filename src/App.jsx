@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function App() {
   // use state of variables
-  const [country, setCountry] = useState('')
+  const [name, setName] = useState('')
   const [selectedFilter, setSelectedFilter] = useState('')
   const [originalData, setOriginalData] = useState([])
   const [filteredData, setFilteredData] = useState(originalData)
@@ -82,7 +82,7 @@ function App() {
                 {data.map((item) => (
                   <CountryCard
                     key={item.id}
-                    country={item.country}
+                    country={item.name.common}
                     imageUrl={item.flag}
                     population={item.population}
                     region={item.region}
