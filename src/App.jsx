@@ -71,7 +71,7 @@ function App() {
           </div>
         </div>
         {/* Country Card component */}
-        <div>
+        <div className='grid-container-wrapper'>
           {loading ? (
             <p>Loading...</p>
           ) : error ? (
