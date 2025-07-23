@@ -3,6 +3,8 @@ import './App.css'
 import { CiSearch } from "react-icons/ci";
 import CountryCard from './component/countrycard';
 import axios, { all } from 'axios';
+import CountryPage from './component/countrypage';
+import {useNavigate} from 'react-router-dom';
 
 function App() {
   // use state of variables
@@ -12,6 +14,9 @@ function App() {
   const [error, setError] = useState(false)
   const [data, setData] = useState([])
   const [inputValue, setInputValue] = useState('')
+
+  // useNavigate hook for navigation
+  const navigate = useNavigate();
 
   const handleFilterChange = (e) => {
     const region = e.target.value;
@@ -36,6 +41,15 @@ function App() {
       : allCountries;
 
     setData(filteredCountries);
+  }
+
+  const handleCountryClick = (e) => {
+    navigate('/countrypage', {
+      state: {
+        countryName: e.target.innerText,
+        countryImage: e.target.querySelector('img')?.src,
+      }
+    });
   }
 
   async function fetchData() {
@@ -93,7 +107,7 @@ function App() {
           ) : (
             <div className='grid-container'>
               {data.map((item, index) => (
-                <div className='grid-item' key={index}>
+                <div className='grid-item' key={index} onClick={handleCountryClick}>
                   <CountryCard
                     country={item.name.common}
                     // countryUrl={item.flag.svg}
