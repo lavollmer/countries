@@ -7,7 +7,7 @@ import axios, { all } from 'axios';
 function App() {
   // use state of variables
   const [selectedFilter, setSelectedFilter] = useState('')
-  const [allCountires, setAllCountires] = useState([])
+  const [allCountries, setAllCountries] = useState([])
   const [originalData, setOriginalData] = useState([])
   const [newFilter, setNewFilter] = useState('')
   const [loading, setLoading] = useState(false)
@@ -21,8 +21,8 @@ function App() {
     setSelectedFilter(region);
 
     const filteredCountries = region
-      ? allCountires.filter((country) => country.region === region)
-      : allCountires;
+      ? allCountries.filter((country) => country.region === region)
+      : allCountries;
 
     setData(filteredCountries);
   }
@@ -32,6 +32,7 @@ function App() {
       const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital');
       console.log(response.data);
       setData(response.data)
+      setAllCountries(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -63,7 +64,7 @@ function App() {
                 <select className='dropdown' value={selectedFilter} onChange={handleFilterChange}>
                   <option className='dropdown-item' value="">Filter by Region</option>
                   <option className='dropdown-item' value='Africa'>Africa</option>
-                  <option className='dropdown-item' value='America'>America</option>
+                  <option className='dropdown-item' value='Americas'>Americas</option>
                   <option className='dropdown-item' value='Asia'>Asia</option>
                   <option className='dropdown-item' value='Europe'>Europe</option>
                   <option className='dropdown-item' value='Oceania'>Oceania</option>
