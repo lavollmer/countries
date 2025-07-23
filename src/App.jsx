@@ -4,7 +4,7 @@ import { CiSearch } from "react-icons/ci";
 import CountryCard from './component/countrycard';
 import axios, { all } from 'axios';
 import CountryPage from './component/countrypage';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   // use state of variables
@@ -34,13 +34,26 @@ function App() {
     const search = e.target.value;
     setInputValue(search);
 
-    const filteredCountries = inputValue.toLowerCase()
+    const filteredCountries = search.toLowerCase()
       ? allCountries.filter((country) =>
-          country.name.common.toLowerCase().includes(search.toLowerCase())
-        )
+        country.name.common.toLowerCase().includes(search.toLowerCase())
+      )
       : allCountries;
 
     setData(filteredCountries);
+  }
+
+  const filterCountries = (search, region) => {
+    let filtered = allCountries;
+    if (search) {
+      filtered = filtered.filter((country) =>
+        country.name.common.toLowerCase().includes(search.toLowerCase())
+      );
+    }
+    if (region) {
+      filtered = filtered.filter((country) => country.region === region);
+    }
+    setData(filtered);
   }
 
   const handleCountryClick = (e) => {
