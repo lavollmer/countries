@@ -1,15 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { CiSearch } from "react-icons/ci";
 import CountryCard from './component/countrycard';
-import axios from 'axios';
+import axios, { all } from 'axios';
 
 function App() {
   // use state of variables
-  const [name, setName] = useState('')
   const [selectedFilter, setSelectedFilter] = useState('')
+  const [allCountires, setAllCountires] = useState([])
   const [originalData, setOriginalData] = useState([])
-  const [filteredData, setFilteredData] = useState(originalData)
   const [newFilter, setNewFilter] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
@@ -18,14 +17,12 @@ function App() {
 
   const handleFilterChange = (e) => {
     const filteredData = e.target.value;
-    setSelectedFilter(newFilter);
+    // setting the Filtered data to the state
+    setSelectedFilter(filteredData);
 
-    if (newFilter === '') {
-      setFilteredData(originalData)
-    } else {
-      const newFilteredData = originalData.filter(item => item.category === newFilter);
-      setFilteredData(newFilteredData);
-    }
+    const filteredCountries = filteredData
+      ? allCountires.filter((country) => country.region === filteredData)
+      : allCountires;
   }
 
   async function fetchData() {
@@ -38,7 +35,10 @@ function App() {
     }
   }
 
-  fetchData()
+  // Wrap in useEffect to fetch data on component mount not infinitely
+  useEffect(() => {
+    fetchData()
+  }, []);
 
 
   return (
@@ -59,7 +59,7 @@ function App() {
             <div>
               <nav>
                 <select className='dropdown' value={selectedFilter} onChange={handleFilterChange}>
-                  <option className='dropdown-item' value={filteredData}>Filter by Region</option>
+                  <option className='dropdown-item' value="">Filter by Region</option>
                   <option className='dropdown-item' value='Africa'>Africa</option>
                   <option className='dropdown-item' value='America'>America</option>
                   <option className='dropdown-item' value='Asia'>Asia</option>
@@ -78,8 +78,8 @@ function App() {
             <p>Error: {error}</p>
           ) : (
             <div className='grid-container'>
-                {data.map((item, index) => (
-                  <div className='grid-item' key={index}>
+              {data.map((item, index) => (
+                <div className='grid-item' key={index}>
                   <CountryCard
                     country={item.name.common}
                     // countryUrl={item.flag.svg}
@@ -87,8 +87,8 @@ function App() {
                     population={item.population}
                     region={item.region}
                     capital={item.capital?.[0] || "N/A"} />
-                  </div>
-                ))}
+                </div>
+              ))}
             </div>
           )}
         </div>
