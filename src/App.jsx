@@ -8,8 +8,6 @@ function App() {
   // use state of variables
   const [selectedFilter, setSelectedFilter] = useState('')
   const [allCountries, setAllCountries] = useState([])
-  const [originalData, setOriginalData] = useState([])
-  const [newFilter, setNewFilter] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const [data, setData] = useState([])
@@ -22,6 +20,19 @@ function App() {
 
     const filteredCountries = region
       ? allCountries.filter((country) => country.region === region)
+      : allCountries;
+
+    setData(filteredCountries);
+  }
+
+  const handleSearchChange = (e) => {
+    const search = e.target.value;
+    setInputValue(search);
+
+    const filteredCountries = inputValue.toLowerCase()
+      ? allCountries.filter((country) =>
+          country.name.common.toLowerCase().includes(search.toLowerCase())
+        )
       : allCountries;
 
     setData(filteredCountries);
@@ -55,7 +66,7 @@ function App() {
             <div>
               <button className='search-button'>
                 <CiSearch />
-                <input className='input' placeholder='Search for a country...' type='text' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                <input className='input' placeholder='Search for a country...' type='text' value={inputValue} onChange={handleSearchChange} />
               </button>
             </div>
             {/* Filter Dropdown Menu */}
