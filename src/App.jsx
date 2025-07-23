@@ -60,11 +60,11 @@ function App() {
               <nav>
                 <select className='dropdown' value={selectedFilter} onChange={handleFilterChange}>
                   <option className='dropdown-item' value={filteredData}>Filter by Region</option>
-                  <option className='dropdown-item' value={filteredData}>Africa</option>
-                  <option className='dropdown-item' value={filteredData}>America</option>
-                  <option className='dropdown-item' value={filteredData}>Asia</option>
-                  <option className='dropdown-item' value={filteredData}>Europe</option>
-                  <option className='dropdown-item' value={filteredData}>Oceania</option>
+                  <option className='dropdown-item' value='Africa'>Africa</option>
+                  <option className='dropdown-item' value='America'>America</option>
+                  <option className='dropdown-item' value='Asia'>Asia</option>
+                  <option className='dropdown-item' value='Europe'>Europe</option>
+                  <option className='dropdown-item' value='Oceania'>Oceania</option>
                 </select>
               </nav>
             </div>
