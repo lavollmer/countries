@@ -30,7 +30,7 @@ function App() {
 
   async function fetchData() {
     try {
-      const response = await axios.get('https://restcountries.com/v3.1/independent?status=true&fields=name,capital,languages,region,subregion,population,flag')
+      const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flag,population,region,capital');
       console.log(response.data);
       setData(response.data)
     } catch (error) {
@@ -82,6 +82,7 @@ function App() {
                   <div className='grid-item' key={index}>
                   <CountryCard
                     country={item.name.common}
+                    // countryUrl={item.flag.svg}
                     imageUrl={item.flag}
                     population={item.population}
                     region={item.region}

@@ -1,9 +1,10 @@
 import '../App.css';
 
-function CountryCard({ country, imageUrl, population, region, capital }) {
+function CountryCard({ country, countryUrl, imageUrl, population, region, capital }) {
   return (
     <div className='countries-card'>
       <div className='country-image'>
+        {/* <img src={countryUrl} alt={`${country} flag`} className='country-flag' /> */}
         <div>{imageUrl}</div>
       </div>
       <div className='country-name'>
