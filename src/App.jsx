@@ -65,7 +65,7 @@ function App() {
           <div className='search'>
             <div>
               <button className='search-button'>
-                <CiSearch />
+                <CiSearch style={{ color: 'black', fontSize: '1em', padding: '4px' }} />
                 <input className='input' placeholder='Search for a country...' type='text' value={inputValue} onChange={handleSearchChange} />
               </button>
             </div>

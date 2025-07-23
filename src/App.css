@@ -42,12 +42,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
+  padding: 14px;
   width: 100%;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  justify-content: space-evenly;
+  justify-content: space-between;
   font-family: 'Nunito sans', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -61,6 +61,7 @@
   font-family: 'Nunito sans', sans-serif;
   border: none;
   padding: 10px;
+  padding-right: 100px;
   background-color: hsl(0, 100%, 100%);
 }
 
