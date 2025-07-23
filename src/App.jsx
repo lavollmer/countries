@@ -16,18 +16,20 @@ function App() {
   const [inputValue, setInputValue] = useState('')
 
   const handleFilterChange = (e) => {
-    const filteredData = e.target.value;
+    const region = e.target.value;
     // setting the Filtered data to the state
-    setSelectedFilter(filteredData);
+    setSelectedFilter(region);
 
-    const filteredCountries = filteredData
-      ? allCountires.filter((country) => country.region === filteredData)
+    const filteredCountries = region
+      ? allCountires.filter((country) => country.region === region)
       : allCountires;
+
+    setData(filteredCountries);
   }
 
   async function fetchData() {
     try {
-      const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flag,population,region,capital');
+      const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital');
       console.log(response.data);
       setData(response.data)
     } catch (error) {
@@ -83,7 +85,7 @@ function App() {
                   <CountryCard
                     country={item.name.common}
                     // countryUrl={item.flag.svg}
-                    imageUrl={item.flag}
+                    imageUrl={item.flags?.svg}
                     population={item.population}
                     region={item.region}
                     capital={item.capital?.[0] || "N/A"} />
