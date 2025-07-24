@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
 import './App.css'
 import CountryPage from './component/countrypage';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import Home from './component/home';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 

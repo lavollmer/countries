@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { CiSearch } from "react-icons/ci";
 import axios from 'axios';
-import CountryCard from './component/countrycard';
+import CountryCard from './countrycard';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
