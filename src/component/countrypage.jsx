@@ -2,12 +2,19 @@ import '../App.css';
 import { FaArrowLeft } from "react-icons/fa6";
 
 const countrypage = ({ imageUrl, country, population, region, capital }) => {
+  
+  const handleBackClick = () => {
+    // Handle back button click
+    window.history.back();
+  }
+
+  
   return (
     <div className='background-page'>
       <div className='header'>
         <h1 className='title'>Where in the world?</h1>
       </div>
-      <div className='button-container'>
+      <div className='button-container' onClick={handleBackClick}>
         <button className='button'><FaArrowLeft /> Back</button>
       </div>
       <div>
