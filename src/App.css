@@ -196,6 +196,28 @@ img {
   font-weight: 400;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Nunito sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: hsl(0, 100%, 100%);
+}
+
 @media screen and (max-width: 600px) {
   body {
     display: flex;
