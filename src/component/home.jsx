@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [selectedFilter, setSelectedFilter] = useState('');
+  const [countryData, setCountryData] = useState([]);
   const [allCountries, setAllCountries] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -29,8 +30,8 @@ function Home() {
     setInputValue(search);
     const filteredCountries = search.toLowerCase()
       ? allCountries.filter((country) =>
-          country.name.common.toLowerCase().includes(search.toLowerCase())
-        )
+        country.name.common.toLowerCase().includes(search.toLowerCase())
+      )
       : allCountries;
     setData(filteredCountries);
   };
@@ -38,8 +39,7 @@ function Home() {
   const handleCountryClick = (e) => {
     navigate('/countrypage', {
       state: {
-        countryName: e.target.innerText,
-        countryImage: e.target.querySelector('img')?.src,
+        countryData: country,
       }
     });
   };
@@ -93,7 +93,7 @@ function Home() {
         ) : (
           <div className='grid-container'>
             {data.map((item, index) => (
-              <div className='grid-item' key={index} onClick={handleCountryClick}>
+              <div className='grid-item' key={index} onClick={() => handleCountryClick(item)}>
                 <CountryCard
                   country={item.name.common}
                   imageUrl={item.flags?.svg}
