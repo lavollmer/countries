@@ -1,8 +1,25 @@
 import '../App.css';
 import { FaArrowLeft } from "react-icons/fa6";
+import {useLocation, useNavigate} from 'react-router-dom';
 
-const countrypage = ({ imageUrl, country, population, region, capital }) => {
-  
+const countrypage = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { countryName: country, countryImage: imageUrl } = location.state || {};
+  const population = location.state?.countryData?.population || 'N/A';
+  const region = location.state?.countryData?.region || 'N/A';
+  const capital = location.state?.countryData?.capital || 'N/A';
+
+
+  if (!countryData) {
+    return (
+      <div>
+        <p>No country data provided</p>
+        <button onClick={() => navigate('/')}>Go Back</button>
+      </div>
+    );
+  }
+
   const handleBackClick = () => {
     // Handle back button click
     window.history.back();
