@@ -244,7 +244,6 @@
 .individual-background-page {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-evenly;
   margin: 0px;
   padding: 0px;
@@ -265,7 +264,6 @@
   display: flex;
   flex-direction: column;
   justify-content: left;
-  width: 500px;
   height: auto;
   padding: 10px;
   overflow: hidden;
@@ -277,8 +275,9 @@
   justify-content: center;
   width: auto;
   height: auto;
-  padding: 10px;
+  margin: 10px;
   overflow: hidden;
+  border: black 1px solid;
 }
 
 .individual-country-details {
@@ -322,19 +321,50 @@
 
   .individual-background-page {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
+    padding: 20px;
   }
 
   .individual-country-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: auto;
     padding: 10px;
+  }
+
+  .individual-country-image {
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: black 1px solid;
   }
 
   .individual-country-card {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .individual-country-details {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .individual-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
   }
 }
