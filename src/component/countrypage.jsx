@@ -24,7 +24,7 @@ const countrypage = () => {
         <h1 className='title'>Where in the world?</h1>
       </div>
       <div>
-         <button className='go-back-button' onClick={() => navigate(-1)}><FaArrowLeft />Back</button>
+        <button className='go-back-button' onClick={() => navigate(-1)}><FaArrowLeft />Back</button>
       </div>
       <div className="individual-background-page">
         <div className="individual-country-card">
@@ -46,9 +46,9 @@ const countrypage = () => {
             </div>
             <h2>Border Countries:</h2>
           </div>
-          </div>
         </div>
       </div>
+    </div>
   )
 }
 

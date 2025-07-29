@@ -15,6 +15,10 @@
   font-family: 'Nunito sans', sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: hsl(0, 100%, 0%);
 }
 
 .background-page {
@@ -224,7 +228,10 @@ img {
   align-items: center;
   justify-content: space-evenly;
   padding: 2px;
-  padding: 10px 20px;
+  width: 100px;
+  height: 40px;
+  margin-left: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -248,10 +255,11 @@ img {
 .individual-country-card {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: auto;
-  margin: 10px;
+  padding: 20px;
 }
 
 .individual-country-image {
