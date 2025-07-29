@@ -18,6 +18,12 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ## Overview
 
+Current Things To Work on (7/30):
+-dark mode
+-mobile responsiveness
+-border countries on single country page
+-props passing through to sub region, top level domain, languages and currencies
+
 ### The challenge
 
 Users should be able to:
