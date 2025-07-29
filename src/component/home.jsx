@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [selectedFilter, setSelectedFilter] = useState('');
-  const [countryData, setCountryData] = useState([]);
   const [allCountries, setAllCountries] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -36,10 +35,11 @@ function Home() {
     setData(filteredCountries);
   };
 
-  const handleCountryClick = (e) => {
+  const handleCountryClick = (index) => {
+    console.log("Clicked")
     navigate('/countrypage', {
       state: {
-        countryData: country,
+        country: allCountries[index].name.common,
       }
     });
   };
@@ -93,8 +93,11 @@ function Home() {
         ) : (
           <div className='grid-container'>
             {data.map((item, index) => (
-              <div className='grid-item' key={index} onClick={() => handleCountryClick(item)}>
+              <div className='grid-item'>
                 <CountryCard
+                  key={index}
+                  index={index}
+                  onClick={() => handleCountryClick(index)}
                   country={item.name.common}
                   imageUrl={item.flags?.svg}
                   population={item.population}
