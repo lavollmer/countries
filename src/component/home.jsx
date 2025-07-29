@@ -28,11 +28,11 @@ function Home() {
   const handleSearchChange = (e) => {
     const search = e.target.value;
     setInputValue(search);
-    const filteredCountries = search.toLowerCase()
-      ? allCountries.filter((country) =>
+    const filteredCountries = search.trim() === ''
+      ? allCountries
+      : allCountries.filter((country) =>
         country.name.common.toLowerCase().includes(search.toLowerCase())
-      )
-      : allCountries;
+      );
     setData(filteredCountries);
   };
 
@@ -101,9 +101,8 @@ function Home() {
         ) : (
           <div className='grid-container'>
             {data.map((item, index) => (
-              <div className='grid-item'>
+              <div className='grid-item' key={index}>
                 <CountryCard
-                  key={index}
                   index={index}
                   onClick={() => handleCountryClick(index)}
                   country={item.name.common}
