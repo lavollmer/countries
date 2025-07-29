@@ -42,7 +42,8 @@ function Home() {
     setInputValue('');
     navigate('/countrypage', {
       state: {
-        country: allCountries[index].name.common,
+        country: allCountries[index],
+        index: index
       }
     });
   };

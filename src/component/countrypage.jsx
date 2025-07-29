@@ -2,15 +2,18 @@ import '../App.css';
 import { FaArrowLeft } from "react-icons/fa6";
 import {useLocation, useNavigate} from 'react-router-dom';
 
-const countrypage = ({index, item}) => {
+const countrypage = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const item = location.state?.country;
 
   if (!item) {
     return (
       <div>
         <p>No country data provided</p>
-        <button onClick={() => navigate('/')}>Go Back</button>
+        <button onClick={() => navigate('/')}>
+          <FaArrowLeft /> Go Back
+        </button>
       </div>
     );
   }
