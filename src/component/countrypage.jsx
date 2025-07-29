@@ -31,9 +31,21 @@ const countrypage = () => {
           </div>
           <div className="individual-country-details">
             <h1>{item.name.common}</h1>
-            <p><strong>Population:</strong> {item.population.toLocaleString()}</p>
-            <p><strong>Region:</strong> {item.region}</p>
-            <p><strong>Capital:</strong> {item.capital?.[0] || 'N/A'}</p>
+            <div>
+              <p><strong>Population:</strong> {item.population.toLocaleString()}</p>
+              <p><strong>Region:</strong> {item.region}</p>
+              <p><strong>Sub Region:</strong> {item.subregion || 'N/A'}</p>
+              <p><strong>Capital:</strong> {item.capital?.[0] || 'N/A'}</p>
+            </div>
+            <div>
+              <p><strong>Top Level Domain:</strong> {item.tld?.join(', ') || 'N/A'}</p>
+              <p><strong>Languages:</strong> {Object.values(item.languages || {}).join(', ') || 'N/A'}</p>
+              <p><strong>Currencies:</strong> {Object.values(item.currencies || {}).map(currency => `${currency.name} (${currency.symbol})`).join(', ') || 'N/A'}</p>
+            </div>
+          </div>
+          <div>
+            <h1>Border Countries:</h1>
+            </div>
           </div>
         </div>
       </div>

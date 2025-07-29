@@ -248,10 +248,19 @@ img {
 .individual-country-card {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-evenly;
   width: 100%;
   height: auto;
   margin: 10px;
+}
+
+.individual-country-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .individual-country-details {
