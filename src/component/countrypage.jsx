@@ -1,6 +1,6 @@
 import '../App.css';
 import { FaArrowLeft } from "react-icons/fa6";
-import {useLocation, useNavigate} from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const countrypage = () => {
   const location = useLocation();
@@ -20,12 +20,23 @@ const countrypage = () => {
 
   return (
     <div>
-      <button onClick={() => navigate(-1)}>Back</button>
-      <h1>{item.name.common}</h1>
-      <img src={item.flags.svg} alt={`${item.name.common} flag`} />
-      <p><strong>Population:</strong> {item.population.toLocaleString()}</p>
-      <p><strong>Region:</strong> {item.region}</p>
-      <p><strong>Capital:</strong> {item.capital?.[0] || 'N/A'}</p>
+      <div className='header'>
+        <h1 className='title'>Where in the world?</h1>
+      </div>
+      <div className="individual-background-page">
+        <button className='go-back-button' onClick={() => navigate(-1)}><FaArrowLeft />Back</button>
+        <div className="individual-country-card">
+          <div className="individual-country-image">
+            <img src={item.flags.svg} alt={`${item.name.common} flag`} />
+          </div>
+          <div className="individual-country-details">
+            <h1>{item.name.common}</h1>
+            <p><strong>Population:</strong> {item.population.toLocaleString()}</p>
+            <p><strong>Region:</strong> {item.region}</p>
+            <p><strong>Capital:</strong> {item.capital?.[0] || 'N/A'}</p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

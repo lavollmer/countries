@@ -218,6 +218,53 @@ img {
   background-color: hsl(0, 100%, 100%);
 }
 
+.go-back-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Nunito sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.individual-background-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+    background-color: hsl(0, 100%, 100%);
+}
+
+.individual-country-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  height: auto;
+  margin: 10px;
+}
+
+.individual-country-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  padding-right: 20px;
+  align-items: left;
+  width: 100%;
+}
+
 @media screen and (max-width: 600px) {
   body {
     display: flex;
