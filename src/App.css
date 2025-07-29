@@ -242,7 +242,7 @@ img {
   padding: 0px;
   width: 100vw;
   height: 100vh;
-    background-color: hsl(0, 100%, 100%);
+  background-color: hsl(0, 100%, 100%);
 }
 
 .individual-country-card {
@@ -266,7 +266,10 @@ img {
 .individual-country-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  font-family: 'Nunito sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
   padding-left: 20px;
   padding-bottom: 30px;
   padding-right: 20px;

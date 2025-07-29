@@ -23,14 +23,16 @@ const countrypage = () => {
       <div className='header'>
         <h1 className='title'>Where in the world?</h1>
       </div>
+      <div>
+         <button className='go-back-button' onClick={() => navigate(-1)}><FaArrowLeft />Back</button>
+      </div>
       <div className="individual-background-page">
-        <button className='go-back-button' onClick={() => navigate(-1)}><FaArrowLeft />Back</button>
         <div className="individual-country-card">
           <div className="individual-country-image">
             <img src={item.flags.svg} alt={`${item.name.common} flag`} />
           </div>
           <div className="individual-country-details">
-            <h1>{item.name.common}</h1>
+            <h1 className='individual-country-name'>{item.name.common}</h1>
             <div>
               <p><strong>Population:</strong> {item.population.toLocaleString()}</p>
               <p><strong>Region:</strong> {item.region}</p>
@@ -42,14 +44,11 @@ const countrypage = () => {
               <p><strong>Languages:</strong> {Object.values(item.languages || {}).join(', ') || 'N/A'}</p>
               <p><strong>Currencies:</strong> {Object.values(item.currencies || {}).map(currency => `${currency.name} (${currency.symbol})`).join(', ') || 'N/A'}</p>
             </div>
+            <h2>Border Countries:</h2>
           </div>
-          <div>
-            <h1>Border Countries:</h1>
-            </div>
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
