@@ -22,8 +22,6 @@ const countrypage = () => {
     <div>
       <div className='header'>
         <h1 className='title'>Where in the world?</h1>
-      </div>
-      <div>
         <button className='go-back-button' onClick={() => navigate(-1)}><FaArrowLeft />Back</button>
       </div>
       <div className="individual-background-page">
