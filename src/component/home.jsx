@@ -12,6 +12,7 @@ function Home() {
   const [error, setError] = useState(false);
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
 
   const navigate = useNavigate();
 
@@ -37,6 +38,8 @@ function Home() {
 
   const handleCountryClick = (index) => {
     console.log("Clicked")
+    setSelectedCardIndex(index);
+    setInputValue('');
     navigate('/countrypage', {
       state: {
         country: allCountries[index].name.common,
@@ -46,11 +49,16 @@ function Home() {
 
   async function fetchData() {
     try {
+      setLoading(true);
       const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital');
       setData(response.data);
       setAllCountries(response.data);
+      setError(false);
     } catch (error) {
       setError(true);
+    } finally {
+      setLoading(false);
+      setSelectedFilter('');
     }
   }
 

@@ -2,7 +2,7 @@ import '../App.css';
 import { FaArrowLeft } from "react-icons/fa6";
 import {useLocation, useNavigate} from 'react-router-dom';
 
-const countrypage = ({item}) => {
+const countrypage = ({index, item}) => {
   const location = useLocation();
   const navigate = useNavigate();
 
