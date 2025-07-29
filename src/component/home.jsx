@@ -43,7 +43,16 @@ function Home() {
     navigate('/countrypage', {
       state: {
         country: allCountries[index],
-        index: index
+        index: index,
+        imageUrl: allCountries[index].flags.svg,
+        population: allCountries[index].population,
+        region: allCountries[index].region,
+        capital: allCountries[index].capital ? allCountries[index].capital[0] : 'N/A',
+        subregion: allCountries[index].subregion || 'N/A',
+        topLevelDomain: allCountries[index].tld ? allCountries[index].tld.join(', ') : 'N/A',
+        languages: allCountries[index].languages ? Object.values(allCountries[index].languages).join(', ') : 'N/A',
+        currencies: allCountries[index].currencies ? Object.values(allCountries[index].currencies).map(currency => `${currency.name} (${currency.symbol})`).join(', ') : 'N/A'
+
       }
     });
   };

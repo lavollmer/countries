@@ -27,8 +27,8 @@ const countrypage = () => {
         <button className='go-back-button' onClick={() => navigate(-1)}><FaArrowLeft />Back</button>
       </div>
       <div className="individual-background-page">
-        <div className="individual-country-image">
-          <img src={item.flags.svg} alt={`${item.name.common} flag`} />
+        <div className="individual-country-image-container">
+          <img src={item.flags.svg} alt={`${item.name.common} flag`} className="individual-country-image" />
         </div>
         <div>
           <div className="individual-country-card">

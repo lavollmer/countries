@@ -242,11 +242,11 @@
 
 .individual-background-page {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 0px;
-  width: 100vw;
-  height: 100vh;
   background-color: hsl(0, 100%, 100%);
 }
 
@@ -260,12 +260,22 @@
   padding: 20px;
 }
 
+.individual-country-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
 .individual-country-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 300px;
-  height: 300px;
+  width: auto;
+  height: auto;
   padding: 10px;
   overflow: hidden;
 }
