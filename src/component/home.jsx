@@ -13,8 +13,14 @@ function Home() {
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
+  const [theme, setTheme] = useState('light');
 
   const navigate = useNavigate();
+
+  const toggleTheme = () => {
+    console.log("Toggling theme");
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+  }
 
   const handleFilterChange = (e) => {
     const region = e.target.value;
@@ -80,6 +86,7 @@ function Home() {
     <div className='background-page'>
       <div className='header'>
         <h1 className='title'>Where in the world?</h1>
+        <button className="toggle-button" onClick={toggleTheme}>Dark Theme</button>
       </div>
       <div className='background-body'>
         <div className='search'>
