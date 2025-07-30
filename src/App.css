@@ -243,7 +243,7 @@
 
 .individual-background-page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   margin: 0px;
   padding: 0px;
@@ -254,7 +254,7 @@
 
 .individual-country-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -373,7 +373,7 @@
 }
 
 @media screen and (max-width: 768px) {
-body {
+  body {
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -390,16 +390,13 @@ body {
   }
 
   .individual-background-page {
+    display: flex;
     flex-direction: column;
-    justify-content: left;
-    padding-left: 40px;
-    padding-right: 40px;
   }
 
   .individual-country-image-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
     height: auto;
   }
