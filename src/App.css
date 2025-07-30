@@ -13,6 +13,13 @@
   --input:hsl(0, 0%, 50%);
   --background:hsl(0, 0%, 99%);
   --white: hsl(0, 100%, 100%);
+  --dark-elements: hsl(0, 0%, 90%);
+  --dark-background: hsl(0, 0%, 95%);
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Nunito sans', sans-serif;
 }
 
 [dark-theme="dark"]{
@@ -25,7 +32,7 @@
 }
 
 .header {
-  background-color: var(--white);
+  background-color: var(--dark-elements);
   color: var(--text);
   display: flex;
   flex-direction: row;
@@ -35,8 +42,8 @@
 }
 
 .toggle-button {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--dark-elements);
+  color: var(--text);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -53,8 +60,8 @@
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--dark-elements);
+  color: var(--text);
 }
 
 .background-page {
@@ -64,7 +71,7 @@
   padding: 0px;
   width: 100vw;
   height: 100vh;
-  background-color: var(--primary-color);
+  background-color: var(--dark-background);
 }
 
 .search {
@@ -76,6 +83,8 @@
   padding-right: 1rem;
   padding: 1rem;
   outline: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .search-button {
@@ -91,8 +100,8 @@
   font-family: 'Nunito sans', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--dark-elements);
+  color: var(--text);
 }
 
 .input {
@@ -103,7 +112,11 @@
   border: none;
   padding: 10px;
   padding-right: 100px;
-  background-color: var(--primary-color);
+  background-color: var(--dark-elements);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
 }
 
 .dropdown {
@@ -111,8 +124,8 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--dark-elements);
+  color: var(--text);
   font-family: 'Nunito sans', sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -128,13 +141,12 @@
   font-weight: 600;
 }
 
-
 .grid-container-wrapper {
   width: 100%;
   max-width: 1200px;
   padding: 1rem;
   margin: auto;
-  background-color: var(--primary-color);
+  background-color: var(--dark-background);
 }
 
 .grid-container {
@@ -151,6 +163,9 @@
   justify-content: space-evenly;
   padding: 20px;
   overflow: hidden;
+  background-color: var(--dark-background);
+  color: var(--text);
+  font-family: 'Nunito sans', sans-serif;
 }
 
 .countries-card {
