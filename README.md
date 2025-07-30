@@ -19,9 +19,9 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ## Overview
 
 Current Things To Work on (7/30):
--dark mode
--mobile responsiveness
--border countries on single country page
+-mobile responsiveness - continue to update
+-border countries on single country page ?
+- When  filtering then selecting a country if doesn't update correctly
 
 ### The challenge
 
