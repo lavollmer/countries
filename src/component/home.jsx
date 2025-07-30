@@ -20,7 +20,12 @@ function Home() {
   const toggleTheme = () => {
     console.log("Toggling theme");
     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+    console.log("Theme toggled to:", theme);
   }
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   const handleFilterChange = (e) => {
     const region = e.target.value;
