@@ -119,6 +119,7 @@ I was able to update the code to have the div tag on the inside of the map metho
 
 8. CSS Styling of the Country Card - I was trying to style the country card component to match the design requirements. I found that after some altering of the padding, adding the image with object cover and stretching the image for responsive design allowed for optimal use.
 9. Filtering of Countries - Filtering of countries was somewhat challenging because I had never worked on a filter through an API before. I realized that when I fetched the data, I was able to also update a state variable with country information. I wrapped the nav bar with the dropdown options in a handleFilterChange function. When someone selected the filter, it would create an event target value and update accordingly.
+10. Difference between Justify-content and align-items: Justify-content controls the alignment and distribution of items on the main axis of the flex. Align-items controls the alignment of items along the cross axis of the flex or grid container.
 
 ### Useful resources
 

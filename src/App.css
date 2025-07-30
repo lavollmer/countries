@@ -322,22 +322,23 @@
   .individual-background-page {
     flex-direction: column;
     justify-content: left;
-    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .individual-country-image-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
-    padding: 10px;
   }
 
   .individual-country-image {
-    display: flex ;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -354,7 +355,7 @@
   }
 
   .individual-country-details {
-    padding: 0px;
+    padding-left: 20px;
     width: 100%;
   }
 
