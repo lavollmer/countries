@@ -24,7 +24,8 @@ function Home() {
   }
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
+    const root = document.documentElement;
+    root.setAttribute('dark-theme', theme === 'dark' ? 'dark' : 'light');
   }, [theme]);
 
   const handleFilterChange = (e) => {
