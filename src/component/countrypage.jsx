@@ -18,6 +18,8 @@ const countrypage = () => {
     );
   }
 
+  console.log(item);
+
   return (
     <div>
       <div className='header'>

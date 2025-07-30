@@ -60,7 +60,7 @@ function Home() {
   async function fetchData() {
     try {
       setLoading(true);
-      const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital');
+      const response = await axios.get('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,currencies,languages,subregion,tld');
       setData(response.data);
       setAllCountries(response.data);
       setError(false);
