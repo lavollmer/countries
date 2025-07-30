@@ -11,11 +11,16 @@
 :root {
   --primary-color: white;
   --secondary-color: black;
+  --grey-950: hsl(200, 15%, 8%);
+  --grey-400: hsl(0, 0%, 50%);
+  --grey-50: hsl(0, 0%, 99%);
 }
 
 [dark-theme="dark"]{
   --primary-color: black;
   --secondary-color: white;
+  --dark-blue:hsl(209, 23%, 22%);
+  --light-blue:hsl(209, 23%, 90%);
 }
 
 .header {
