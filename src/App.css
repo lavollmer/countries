@@ -371,3 +371,71 @@
     margin: 0px;
   }
 }
+
+@media screen and (max-width: 768px) {
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .card-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .individual-background-page {
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .individual-country-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .individual-country-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: black 1px solid;
+  }
+
+  .individual-country-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .individual-country-details {
+    padding-left: 20px;
+    width: 100%;
+  }
+
+  .individual-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+}

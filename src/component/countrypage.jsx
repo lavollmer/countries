@@ -36,6 +36,7 @@ const countrypage = () => {
               <h1 className='individual-country-name'>{item.name.common}</h1>
               <div className='grid-container'>
                 <div className='individual-grid-item'>
+                  <p><strong>Native Name:</strong> {item.name.nativeName ? Object.values(item.name.nativeName)[0].common : 'N/A'}</p>
                   <p><strong>Population:</strong> {item.population.toLocaleString()}</p>
                   <p><strong>Region:</strong> {item.region}</p>
                   <p><strong>Sub Region:</strong> {item.subregion || 'N/A'}</p>
@@ -45,6 +46,9 @@ const countrypage = () => {
                   <p><strong>Top Level Domain:</strong> {item.tld?.join(', ') || 'N/A'}</p>
                   <p><strong>Languages:</strong> {Object.values(item.languages || {}).join(', ') || 'N/A'}</p>
                   <p><strong>Currencies:</strong> {Object.values(item.currencies || {}).map(currency => `${currency.name} (${currency.symbol})`).join(', ') || 'N/A'}</p>
+                </div>
+                <div>
+                  <h2>Border Countries</h2>
                 </div>
               </div>
             </div>

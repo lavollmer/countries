@@ -22,7 +22,6 @@ Current Things To Work on (7/30):
 -dark mode
 -mobile responsiveness
 -border countries on single country page
--props passing through to sub region, top level domain, languages and currencies
 
 ### The challenge
 
@@ -120,6 +119,7 @@ I was able to update the code to have the div tag on the inside of the map metho
 8. CSS Styling of the Country Card - I was trying to style the country card component to match the design requirements. I found that after some altering of the padding, adding the image with object cover and stretching the image for responsive design allowed for optimal use.
 9. Filtering of Countries - Filtering of countries was somewhat challenging because I had never worked on a filter through an API before. I realized that when I fetched the data, I was able to also update a state variable with country information. I wrapped the nav bar with the dropdown options in a handleFilterChange function. When someone selected the filter, it would create an event target value and update accordingly.
 10. Difference between Justify-content and align-items: Justify-content controls the alignment and distribution of items on the main axis of the flex. Align-items controls the alignment of items along the cross axis of the flex or grid container.
+11. Fixing props passing of additional information - I was trying to figure out to pass more information to the individual country pages. I found that doing a console.log determined what information was being passed. From there, I updated the fetch request to include the additional information which ultimately was able to pass the information to the countires.
 
 ### Useful resources
 
