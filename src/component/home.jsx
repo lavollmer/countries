@@ -14,12 +14,14 @@ function Home() {
   const [inputValue, setInputValue] = useState('');
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
   const [theme, setTheme] = useState('light');
+  const [toggled, setToggled] = useState(false);
 
   const navigate = useNavigate();
 
   const toggleTheme = () => {
     console.log("Toggling theme");
     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+    setToggled(!toggled);
     console.log("Theme toggled to:", theme);
   }
 
@@ -92,7 +94,12 @@ function Home() {
     <div className='background-page' data-theme={theme}>
       <div className='header'>
         <h1 className='title'>Where in the world?</h1>
-        <button className="toggle-button" onClick={toggleTheme}>Dark Theme</button>
+        <div>
+          <p className='theme-label'>{toggled ? 'Dark Theme' : 'Light Theme'}</p>
+          <button className={`toggle-button ${toggled ? 'dark' : 'light'}`} onClick={toggleTheme}>
+            <div className="thumb"></div>
+          </button>
+        </div>
       </div>
       <div className='background-body'>
         <div className='search'>
