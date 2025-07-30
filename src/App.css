@@ -7,8 +7,20 @@
   height: 100vh;
 }
 
+/* dark theme custom CSS */
+:root {
+  --primary-color: hsl(0, 100%, 100%);
+  --secondary-color: hsl(0, 100%, 0%);
+}
+
+[dark-theme="dark"]{
+  --background-color: hsl(0, 100%, 0%);
+  --text-color: hsl(0, 100%, 100%);
+}
+
 .header {
-  background-color: hsl(0, 100%, 100%);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .title {
