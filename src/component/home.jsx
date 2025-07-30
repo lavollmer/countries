@@ -88,7 +88,7 @@ function Home() {
   }, []);
 
   return (
-    <div className='background-page'>
+    <div className='background-page' data-theme={theme}>
       <div className='header'>
         <h1 className='title'>Where in the world?</h1>
         <button className="toggle-button" onClick={toggleTheme}>Dark Theme</button>
@@ -98,7 +98,7 @@ function Home() {
           <div>
             <button className='search-button'>
               <CiSearch style={{ color: 'black', fontSize: '1em', padding: '4px' }} />
-              <input className='input' placeholder='Search for a country...' type='text' value={inputValue} onChange={handleSearchChange} />
+              <input className='input' id="search-input" placeholder='Search for a country...' type='text' value={inputValue} onChange={handleSearchChange} />
             </button>
           </div>
           <div>
