@@ -47,9 +47,6 @@ const countrypage = () => {
                   <p><strong>Languages:</strong> {Object.values(item.languages || {}).join(', ') || 'N/A'}</p>
                   <p><strong>Currencies:</strong> {Object.values(item.currencies || {}).map(currency => `${currency.name} (${currency.symbol})`).join(', ') || 'N/A'}</p>
                 </div>
-                <div>
-                  <h2>Border Countries</h2>
-                </div>
               </div>
             </div>
           </div>

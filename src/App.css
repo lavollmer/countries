@@ -324,7 +324,7 @@
 
 .individual-background-page {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   margin: 0px;
   padding: 0px;

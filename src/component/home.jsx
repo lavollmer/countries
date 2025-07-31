@@ -52,20 +52,21 @@ function Home() {
 
   const handleCountryClick = (index) => {
     console.log("Clicked")
+    const selectedCountry = data[index];
     setSelectedCardIndex(index);
     setInputValue('');
     navigate('/countrypage', {
       state: {
-        country: allCountries[index],
+        country: selectedCountry,
         index: index,
-        imageUrl: allCountries[index].flags.svg,
-        population: allCountries[index].population,
-        region: allCountries[index].region,
-        capital: allCountries[index].capital ? allCountries[index].capital[0] : 'N/A',
-        subregion: allCountries[index].subregion || 'N/A',
-        topLevelDomain: allCountries[index].tld ? allCountries[index].tld.join(', ') : 'N/A',
-        languages: allCountries[index].languages ? Object.values(allCountries[index].languages).join(', ') : 'N/A',
-        currencies: allCountries[index].currencies ? Object.values(allCountries[index].currencies).map(currency => `${currency.name} (${currency.symbol})`).join(', ') : 'N/A'
+        imageUrl: selectedCountry.flags.svg,
+        population: selectedCountry.population,
+        region: selectedCountry.region,
+        capital: selectedCountry.capital ? selectedCountry.capital[0] : 'N/A',
+        subregion: selectedCountry.subregion || 'N/A',
+        topLevelDomain: selectedCountry.tld ? selectedCountry.tld.join(', ') : 'N/A',
+        languages: selectedCountry.languages ? Object.values(selectedCountry.languages).join(', ') : 'N/A',
+        currencies: selectedCountry.currencies ? Object.values(selectedCountry.currencies).map(currency => `${currency.name} (${currency.symbol})`).join(', ') : 'N/A'
 
       }
     });
