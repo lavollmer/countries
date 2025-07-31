@@ -1,12 +1,18 @@
-# Frontend Mentor - REST Countries API with color theme switcher solution
+# REST Countries API with color theme switcher solution
 
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+The design challenge was to integrate with the REST Countries API to pull country data and display it based on the design portfolio given. 
+
+Users should be able to:
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Toggle the color scheme between light and dark mode
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -18,21 +24,26 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ## Overview
 
-- When  filtering then selecting a country if doesn't update correctly
+This project was inspired by the "REST Countries API with color theme" challenge from Frontend Mentor. I was provided with a design portfolio and tasked with building the website based solely on the visual requirements, without any additional instructions.
 
-### The challenge
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Users should be able to:
+### Screenshots
 
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
-- Toggle the color scheme between light and dark mode
+Country Homepage:
+![Countries Homepage](./src//assets/countries_homepage.png)
 
-### Screenshot
+Country Homepage Filtered Region:
+![Countries Homepage Filtered Region](./src/assets/countries_filteredregion.png)
 
-![](./screenshot.jpg)
+Country Homepage Filtered Country:
+![Countries Homepage Filtered Country](./src/assets/countries_filteredcountry.png)
+
+Country Page Detail:
+![Countries Homepage Single Country Page](./src/assets/countries_singlecountry.png)
+
+Dark Theme:
+![Dark Theme Countries Homepage](./src/assets/countries_darktheme.png)
 
 
 ### Links
@@ -116,6 +127,7 @@ I was able to update the code to have the div tag on the inside of the map metho
 9. Filtering of Countries - Filtering of countries was somewhat challenging because I had never worked on a filter through an API before. I realized that when I fetched the data, I was able to also update a state variable with country information. I wrapped the nav bar with the dropdown options in a handleFilterChange function. When someone selected the filter, it would create an event target value and update accordingly.
 10. Difference between Justify-content and align-items: Justify-content controls the alignment and distribution of items on the main axis of the flex. Align-items controls the alignment of items along the cross axis of the flex or grid container.
 11. Fixing props passing of additional information - I was trying to figure out to pass more information to the individual country pages. I found that doing a console.log determined what information was being passed. From there, I updated the fetch request to include the additional information which ultimately was able to pass the information to the countires.
+12. Using correct index to display filtered list - I was using the index from the original allCountries array for everything when I should have specified the list. When a user selected a country from the filtered list(data), it navigated to using a index that no longer matches allCountries leading to the wrong data being shown. To fix this, I used the country object from data array, not allCountires[index].
 
 ### Useful resources
 
