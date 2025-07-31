@@ -145,6 +145,9 @@ function Home() {
           </div>
         )}
       </div>
+      <div className='footer-container'>
+        <p className='footer'>Made by Laura Dev 2025</p>
+      </div>
     </div>
   );
 }

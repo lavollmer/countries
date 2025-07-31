@@ -387,6 +387,16 @@
   overflow: hidden;
 }
 
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--dark-elements);
+  color: var(--text);
+}
+
 @media screen and (max-width: 600px) {
   /* body {
     display: flex;
