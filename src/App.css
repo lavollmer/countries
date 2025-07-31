@@ -388,21 +388,25 @@
 }
 
 @media screen and (max-width: 600px) {
-  body {
+  /* body {
     display: flex;
     flex-direction: column;
     margin: 0px;
     padding: 0px;
-  }
+  } */
 
   .header {
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    justify-content: center;
+    width: 100%;
+    height: auto;
   }
 
   .title {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin: 10px 0;
   }
 
@@ -430,8 +434,8 @@
 
   .search {
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px;
   }
 
   .search-button {
@@ -468,10 +472,10 @@
     margin: 10px 0;
   }
 
-  .country-image {
+  /* .country-image {
     width: 100%;
     height: auto;
-  }
+  } */
 
   .country-flag {
     width: 100%;
@@ -500,16 +504,14 @@
   .individual-background-page {
     flex-direction: column;
     justify-content: left;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .individual-country-image-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: auto;
   }
 
   .individual-country-image {
@@ -517,9 +519,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
     border: black 1px solid;
   }
 
@@ -549,12 +548,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  /* body {
     display: flex;
     flex-direction: column;
     margin: 0px;
     padding: 0px;
-  }
+  } */
 
   .card-list {
     display: flex;
