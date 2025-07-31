@@ -17,7 +17,6 @@ Users should be able to:
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -27,6 +26,8 @@ Users should be able to:
 This project was inspired by the "REST Countries API with color theme" challenge from Frontend Mentor. I was provided with a design portfolio and tasked with building the website based solely on the visual requirements, without any additional instructions.
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+There are no assets for this challenge, as the country flags will be pulled from the [REST Countries API](https://restcountries.com) and I used React Icon library.
 
 ### Screenshots
 
@@ -53,6 +54,12 @@ Dark Theme:
 
 ## My process
 
+The REST Countries API project was developed to provide accessible and structured information about countries worldwide through a clean and scalable RESTful interface. The development process began with initializing the project structure and importing a comprehensive dataset of country information. 
+
+Using the API, I was able to represent key country attributes such as ISO codes, names, capitals, regions, and currencies. API endpoints were progressively implemented to support searching, filtering, and retrieving detailed country data. 
+
+Additional features like dark theme, single page display of information, mobile responsiveness were added. Error debugging and design were completed continously throughout the building of the project.
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -61,12 +68,9 @@ Dark Theme:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- React Icons
 
 ### What I learned
-
-There are no assets for this challenge, as the country flags will be pulled from the [REST Countries API](https://restcountries.com) and you can use an icon font library for the icons.
-
-### Continued development
 
 1. Displaying API Data in Cards - I learned how to work better with API data and display on the frontend. I used useSTate for data, loading state and error handling and useEffect to fetch the data when the component mounts. I created a card component that is reusable to accept data as props. I mapped over the data and rendered the cards. I integrated the data into my app.
 2. Syntax Erros - Missing intializer in const declaration. I received this error working on my Axios backend to frontend connection. Through this I realized my reusable card component needed to be a function, and not a const. In React, declaring a functional component vs. assigning an arrow function to a const variable revolves around preferences. The biggest difference is hoisting - when using a function component, it hoists it to the top of the file.
