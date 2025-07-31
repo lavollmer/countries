@@ -32,18 +32,28 @@ There are no assets for this challenge, as the country flags will be pulled from
 ### Screenshots
 
 Country Homepage:
+
+
 ![Countries Homepage](./src//assets/countries_homepage.png)
 
 Country Homepage Filtered Region:
+
+
 ![Countries Homepage Filtered Region](./src/assets/countries_filteredregion.png)
 
 Country Homepage Filtered Country:
+
+
 ![Countries Homepage Filtered Country](./src/assets/countries_filteredcountry.png)
 
 Country Page Detail:
+
+
 ![Countries Homepage Single Country Page](./src/assets/countries_singlecountry.png)
 
 Dark Theme:
+
+
 ![Dark Theme Countries Homepage](./src/assets/countries_darktheme.png)
 
 
@@ -72,9 +82,9 @@ Additional features like dark theme, single page display of information, mobile 
 
 ### What I learned
 
-1. Displaying API Data in Cards - I learned how to work better with API data and display on the frontend. I used useSTate for data, loading state and error handling and useEffect to fetch the data when the component mounts. I created a card component that is reusable to accept data as props. I mapped over the data and rendered the cards. I integrated the data into my app.
-2. Syntax Erros - Missing intializer in const declaration. I received this error working on my Axios backend to frontend connection. Through this I realized my reusable card component needed to be a function, and not a const. In React, declaring a functional component vs. assigning an arrow function to a const variable revolves around preferences. The biggest difference is hoisting - when using a function component, it hoists it to the top of the file.
-3. TypeError - data.map is not a function of App. This error involved declaring my data variable and useState. I realized that data should be an array and not an empty string when declaring. The map () method i s a standard JS array method use to iterate over array elements.
+1. Displaying API Data in Cards - I learned how to work better with API data and display on the frontend. I used useState for data, loading state and error handling and useEffect to fetch the data when the component mounts. I created a card component that is reusable to accept data as props. I mapped over the data and rendered the cards. I integrated the data into my app.
+2. Syntax Errors - Missing intializer in const declaration. I received this error working on my Axios backend to frontend connection. Through this I realized my reusable card component needed to be a function, and not a const. In React, declaring a functional component vs. assigning an arrow function to a const variable revolves around preferences. The biggest difference is hoisting - when using a function component, it hoists it to the top of the file.
+3. TypeError - data.map is not a function of App. This error involved declaring my data variable and useState. I realized that data should be an array and not an empty string when declaring. The map () method is a standard JS array method use to iterate over array elements.
 4. Fetching Data with Axios - Wrap Axios call within in async function and use await axios.get() to pause execution until the promise returns. Use a try...catch block for robust error handling.
 5. Add index as a second parameter in .map() - Map method needs two arguments - the current item listed first and the second is the index starting at 0.
 6. Correctly Passing Data to Props - I was intially referencing properties that didn't exist or were structured differently. I was able to change the values based on actual structure and successfully pass the information. I learned to always check my actual data structure.
@@ -129,7 +139,7 @@ I was able to update the code to have the div tag on the inside of the map metho
 
 8. CSS Styling of the Country Card - I was trying to style the country card component to match the design requirements. I found that after some altering of the padding, adding the image with object cover and stretching the image for responsive design allowed for optimal use.
 9. Filtering of Countries - Filtering of countries was somewhat challenging because I had never worked on a filter through an API before. I realized that when I fetched the data, I was able to also update a state variable with country information. I wrapped the nav bar with the dropdown options in a handleFilterChange function. When someone selected the filter, it would create an event target value and update accordingly.
-10. Difference between Justify-content and align-items: Justify-content controls the alignment and distribution of items on the main axis of the flex. Align-items controls the alignment of items along the cross axis of the flex or grid container.
+10. Difference between justify-content and align-items CSS property: justify-content controls the alignment and distribution of items on the main axis of the flex. Align-items controls the alignment of items along the cross axis of the flex or grid container.
 11. Fixing props passing of additional information - I was trying to figure out to pass more information to the individual country pages. I found that doing a console.log determined what information was being passed. From there, I updated the fetch request to include the additional information which ultimately was able to pass the information to the countires.
 12. Using correct index to display filtered list - I was using the index from the original allCountries array for everything when I should have specified the list. When a user selected a country from the filtered list(data), it navigated to using a index that no longer matches allCountries leading to the wrong data being shown. To fix this, I used the country object from data array, not allCountires[index].
 
@@ -141,8 +151,6 @@ I was able to update the code to have the div tag on the inside of the map metho
 - [React Icons](https://react-icons.github.io/react-icons/search/#q=) - This provided the icons for the website.
 - [CSS Box Shadow](https://www.w3schools.com/css/css3_shadows_box.asp) Box shadow property to create paper like cards.
 - [Const vs Function Component](https://dev.to/ugglr/react-functional-components-const-vs-function-2kj9) - Explanation of const vs function component.
-- [R](h) - This provided the icons for the website.
-- [R](h) - This provided the icons for the website.
 
 ## Author
 
