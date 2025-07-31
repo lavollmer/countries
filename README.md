@@ -59,8 +59,8 @@ Dark Theme:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Laura Dev Solution](https://www.frontendmentor.io/solutions/responsive-reactjs-css-rest-countries-api-homepage-m6szSGSCGw)
+- Live Site URL: [Netlify Laura Dev Rest Countries API Homepage](https://restcountriesapi-search.netlify.app/)
 
 ## My process
 
